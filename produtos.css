@@ -1,0 +1,33 @@
+header {
+    background: #ffb703 ;
+    padding: 20px;
+}
+
+#logo { 
+   width: 20%; 
+}
+
+.menu { 
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
