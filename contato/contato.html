@@ -4,7 +4,7 @@
     <head> 
         <meta charset="UFT-8">
         <title>Contato</title>
-        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="../helpers/reset.css">
         <link rel="stylesheet" href="./style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,14 +18,14 @@
         <header>
             <div class="menu"> 
                 <div class="box-menu">
-                    <img id="logo" src="../img/logoGeliDeli-.png">
+                    <img id="logo" src="../img/logoGeliDeli-.png" alt="logo GeliDeli">
                     <h1 class="titulo-principal">Geleias Delícias</h1>
                 </div>
                 <nav>
                     <ul class="nav-menu"> 
                         <li><a href="../home/index.html">Home</a</li>
                         <li><a href="../produtos/produtos.html">Produtos</a></li>
-                        <li><a href="../contato/contato.html">Contatos</a></li>
+                        <li><a href="../contato/contato.html">Contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -35,64 +35,67 @@
             <form id="container-form"> 
                 <div class="container-input">
                     <label for="nomesobrenome"> Nome e Sobrenome</label>
-                    <input class="input" type="text" id="nomesobrenome">
+                    <input class="input" type="text" id="nomesobrenome" required>
                 </div>
 
                 <div class="container-input">
                     <label for="email">Email</label>
-                    <input class="input" type="text" id="email">
+                    <input class="input" type="email" id="email" required placeholder="seuemail@dominio.com">
                 </div>
 
                 <div class="container-input">
                     <label for="telefone">Telefone</label>
-                    <input class="input" type="text" id="telefone">
+                    <input class="input" type="telefone" id="telefone" required placeholder="(xx) xxxxx-xxxx">
                 </div>
 
-                <div>
-                <input class="botao-enviar" type="submit" value="Enviar Formulário">
-                </div>
-
-                <label for="mensagem">Mensagem</label>
-                <textarea cols="70" rows="10" id="mensagem" class="input-padrao"></textarea>
                 
-                <div>
-                    <p>Como prefere o nosso contato?</p>
+                <label for="mensagem">Mensagem</label>
+                <textarea cols="70" rows="10" id="mensagem" class="input-mensagem" required></textarea>
+                
+                <fieldset class="radio-contato">
+                    <legend>Como prefere o nosso contato?</legend>
                     <label for="radio-email">
                         <input type="radio" name="contato" value="email" id="radio-email">
                         Email
                     </label>
-                
+                    
                     <label for="radio-telefone">
                         <input type="radio" name="contato" value="telefone" id="radio-telefone"> 
                         Telefone
                     </label>
-                
+                    
                     <label for="radio-whatsapp">
-                        <input type="radio" name="contato" value="whatsapp" id="radio-whatsapp">
+                        <input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>
                         WhatsApp
                     </label>
-                </div>
+                </fieldset>
                 
-                <div>
-                    <p>Qual horário prefere ser atendido?</p>
+                <fieldset class="horario-contato">
+                    <legend>Qual horário prefere ser atendido?</legend>
                     <select>
                         <option>Manhã</option>
                         <option>Tarde</option>
                         <option>Noite</option>
                     </select>
+                </fieldset>
+                
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" checked>
+                        Gostaria de receber nossas novidades por email?
+                    </label>
+                </div>    
+                
+                <div class="container-botao">
+                    <input class="botao-enviar" type="submit" value="Enviar Formulário">
                 </div>
-
-                <label class="checkbox">
-                    <input type="checkbox">
-                    Gostaria de receber nossas novidades por email?
-                </label>
 
             </form>
         </main>
 
 
         <footer>
-            <img class="logo-footer" src="../img/logoGeliDeli-.png ">
+            <img class="logo-footer" src="../img/logoGeliDeli-.png " alt="logo GeliDeli">
             <p class="copyright">&copy; Copyright GeliDeli 2020</p>
         </footer>  
     
