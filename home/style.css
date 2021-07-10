@@ -45,55 +45,55 @@ header {
     font-family: 'Otomanopee One', sans-serif;
 }
 
-.nav-menu {
-    vertical-align: middle;
-}
 
 nav li {
     display: inline;
-    margin: 0 0 0 15;
+    margin: 0 15px 0 0;
     padding: 5px;
 }
 
 nav a {
+    display: inline-block;
     text-transform: uppercase;
     color: #fefefe;
     font-weight: bold;
     font-size: 22px;
     text-decoration: none;
+    transition: 0.3s ease-in-out;
 }
 
 nav a:hover {
-    color:#011627;
-    text-decoration: underline;
+    transform: translateY(-3px);
 }
 
 #banner {
     width: 100%;
+    transition: 0.1s;
 }
 
 .principal {
-    background: #3c3c3c;
-    padding: 70px 150px;
+    background:#fefefe;
+    padding: 4em 0;
 }
+
 
 .principal p {
     text-align: center; 
-    padding: 10px 0;
-    color: #fefefe;
+    padding: 0.4em 0;
+    color: #e71d36;
 }
 
 #missao {
-    font-size: 30px;
+    font-size: 20px;
 }
 
 em strong {
-    color: #fefefe;
+    color: #e71d36;
 }
 
 .beneficio {
     background: #fefefe;
-    padding: 70px 150px;
+    padding: 4em 0;
 }
 
 .titulo-centralizado {
@@ -110,11 +110,14 @@ em strong {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%; 
+    width: 80%;
+    margin: auto; 
+
 }
 
 .beneficio-lista {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 
 .itens {
@@ -122,17 +125,27 @@ em strong {
     font-size: 20px;
     text-decoration: none;
     list-style-type: none;
-    padding: 20px 0;
+    padding: 0.4em;
 }
 
 .foto-beneficio {
     height: 300px;
     border-radius: 5px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-
-
-
 }
+
+.mapa {
+    display: block;
+    padding: 4em 0;
+    text-align: center;
+}
+
+.mapa p { 
+    padding: 1em 0; 
+    width: 60%;
+    margin: 0 auto;
+}
+
 
 footer {
     text-align: center;
