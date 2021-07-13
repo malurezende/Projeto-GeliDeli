@@ -5,25 +5,23 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background: #ffffff;
-}
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #fefefe;
+    width: 100%;
 
-.teste-backgroud {
-    background:#e71d36;
 }
 
 header {
+    background: #e71d36;
     padding: 20px;
+    width: 100%;
 }
-
 
 .menu {
     display: flex;
     flex-direction: row;
-    align-items: center;
     width: 100%;
-    padding: 5px;
+    align-items: center;
 }
 
 .box-menu {
@@ -42,14 +40,21 @@ header {
     color: #fefefe;
     font-weight: 500;
     text-transform: uppercase;
-    font-family: 'Otomanopee One', sans-serif;
+    font-family: 'Otomanopee One', sans-serif; 
+    font-size: 33px;
 }
 
+.nav.menu {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    text-decoration-style: none;
+}
 
 nav li {
     display: inline;
-    margin: 0 15px 0 0;
     padding: 5px;
+    list-style-type: none;
 }
 
 nav a {
@@ -72,8 +77,9 @@ nav a:hover {
 }
 
 .principal {
-    background:#fefefe;
+    width: 60%;
     padding: 4em 0;
+    margin: 0 auto;
 }
 
 
@@ -81,6 +87,7 @@ nav a:hover {
     text-align: center; 
     padding: 0.4em 0;
     color: #e71d36;
+    font-size: 1.2em;
 }
 
 #missao {
@@ -92,7 +99,8 @@ em strong {
 }
 
 .beneficio {
-    background: #fefefe;
+    background: rgb(231,29,54);
+    background: linear-gradient(156deg, rgba(231,29,54,1) 0%, rgba(201,146,74,1) 49%, rgba(255,244,0,1) 100%);
     padding: 4em 0;
 }
 
@@ -103,6 +111,7 @@ em strong {
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2)
 }
 
 .beneficio-conteudo {
@@ -112,7 +121,6 @@ em strong {
     align-items: center;
     width: 80%;
     margin: auto; 
-
 }
 
 .beneficio-lista {
@@ -122,28 +130,33 @@ em strong {
 
 .itens {
     font-style: italic;
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: none;
     list-style-type: none;
     padding: 0.4em;
+    color: #fefefe;
+    text-align: center;
 }
 
 .foto-beneficio {
-    height: 300px;
     border-radius: 5px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .mapa {
-    display: block;
-    padding: 4em 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    margin: 4em auto;
 }
 
 .mapa p { 
     padding: 1em 0; 
-    width: 60%;
-    margin: 0 auto;
+    font-size: 1.2em;
+    width: 80%;
+    line-height: 2em;
+    text-align: center;
 }
 
 
@@ -151,8 +164,8 @@ footer {
     text-align: center;
     background-color: #e71d36;
     width: 100%;
-    margin-top: 20px;
-    padding: 20px 0;
+    padding: 0 0 10px 0;
+
 }
 
 .logo-footer {
@@ -162,4 +175,52 @@ footer {
 .copyright {
     color: whitesmoke;
     font-size: 13px;
+}
+
+@media screen and (max-width: 600px) {
+    .menu, .principal, .beneficio-lista, .mapa {
+        width: auto;
+    }
+
+    .menu {
+       flex-direction: column; 
+    }
+
+    .titulo-principal {
+        font-size: 20px;
+    }
+
+    .beneficio {
+        padding: 0;
+    }
+
+    .beneficio-conteudo {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .beneficio-lista { 
+        margin-bottom: 15px;
+    }
+
+    .itens {
+        text-align: center;
+    }
+
+    .foto-beneficio {
+        width: 100%;
+    }
+
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .beneficio-lista, .foto-beneficio {
+        width: 100%;
+    }
 }

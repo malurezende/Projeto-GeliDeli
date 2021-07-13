@@ -48,21 +48,23 @@ header {
 }
 
 nav li {
+    display: inline;
     padding: 5px;
     list-style-type: none;
 }
 
 nav a {
-    text-decoration: none;
+    display: inline-block;
     text-transform: uppercase;
     color: #fefefe;
     font-weight: bold;
     font-size: 22px;
+    text-decoration: none;
+    transition: 00.3s ease-in-out;
 }
 
 nav a:hover {
-    color:#011627;
-    text-decoration: underline;
+    transform: translateY(-3px);
 }
 
 #container-form {  
@@ -81,6 +83,7 @@ nav a:hover {
 .input {
     width: 500px;
     padding: 10px 0 10px 10px; 
+    margin-top: 10px;
 }
 
 .input-mensagem {
@@ -88,18 +91,26 @@ nav a:hover {
     width: 100%;
 }
 
-
 .radio-contato {
     display: flex;
     flex-direction: column;
-    margin: 15px 0 15px 0;  
+    margin: 15px 0;  
     border: none;
 }
 
 .horario-contato {
-    margin-bottom: 15px 0 15px 0;
+    margin-bottom: 15px 0;
     margin: auto;
     border: none;
+}
+
+legend { 
+    margin-bottom: 10px;
+}
+.horario-contato select {
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 5px;
 }
 
 .checkbox { 
@@ -148,3 +159,42 @@ footer {
     font-size: 13px;
 }
 
+@media screen and (max-width: 600px) {
+    .menu {
+        flex-direction: column; 
+        width: auto;
+     }
+     
+     .titulo-principal {
+        font-size: 20px;
+     }
+
+     #container-form {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 1em;
+     }
+
+     .container-input {
+        width: 85%;
+        margin: 15px auto;
+        font-size: 1em;
+     }
+
+     .input {
+        width: 100%;
+     }
+
+     .input-mensagem {
+        width: 100%;
+     }
+
+     .radio-contato, .horario-contato, .checkbox {
+        width: 85%;
+        margin: 15px auto;
+     }
+
+
+
+
+}

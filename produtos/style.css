@@ -1,19 +1,22 @@
+body { 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* padding: 20px; */
+}
+
 header {
     background: #e71d36 ;
     padding: 20px;
 }
 
-header {
-    padding: 20px;
+.container-main {
+    padding: 100px 0;
 }
-
 
 .menu {
     display: flex;
     flex-direction: row;
-    align-items: center;
     width: 100%;
-    padding: 5px;
+    align-items: center;
 }
 
 .box-menu {
@@ -36,39 +39,43 @@ header {
     font-size: 33px;
 }
 
-.nav-menu {
-    vertical-align: middle;
+.nav.menu {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    text-decoration-style: none;
+    margin: 30px 0 30px 0;
 }
 
 nav li {
     display: inline;
-    margin: 0 0 0 15;
     padding: 5px;
+    list-style-type: none;
 }
 
 nav a {
+    display: inline-block;
     text-transform: uppercase;
     color: #fefefe;
     font-weight: bold;
     font-size: 22px;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    transition: 00.3s ease-in-out;
 }
 
 nav a:hover {
-    color: #011627;
-    text-decoration: underline;
+    transform: translateY(-3px);
 }
  
 .produtos {
     width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
 }
 
 .produtos li {
-    display: inline-block;
     text-align: center;
-    width: 30%;
     vertical-align: top;
     margin: 0 1.5%;
     margin-top: 20px;
@@ -76,6 +83,10 @@ nav a:hover {
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 10px;
+}
+
+.produtos li img {
+    width: 100%;
 }
 
 .produtos li:hover {
@@ -108,16 +119,36 @@ footer {
     text-align: center;
     background-color: #e71d36;
     width: 100%;
-    margin-top: 20px;
-    padding: 20px 0;
+    padding: 0 0 10px 0;
 }
 
 .logo-footer {
     width: 150px;
-
 }
+
 .copyright {
     color: whitesmoke;
     font-size: 13px;
+}
+
+@media screen and (max-width: 600px) {
+    .menu {
+        flex-direction: column; 
+        width: auto;
+     }
+
+     .titulo-principal {
+        font-size: 20px;
+     }
+
+    .produtos {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .produto-geleia, .produto-kit, .produto-chutney {
+        width: 100%;
+    }
+
 
 }
