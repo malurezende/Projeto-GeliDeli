@@ -44,7 +44,7 @@ header {
     font-size: 33px;
 }
 
-.nav.menu {
+.nav-menu {
     display: flex;
     flex-direction: row;
     text-transform: uppercase;
@@ -77,6 +77,9 @@ nav a:hover {
 }
 
 .principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 60%;
     padding: 4em 0;
     margin: 0 auto;
@@ -85,9 +88,11 @@ nav a:hover {
 
 .principal p {
     text-align: center; 
-    padding: 0.4em 0;
+    padding: 1em 0;
     color: #e71d36;
     font-size: 1.2em;
+    line-height: 2em;
+    width: 100%;
 }
 
 #missao {
@@ -190,8 +195,16 @@ footer {
         font-size: 20px;
     }
 
+    .principal {
+        padding: 20px;
+    }
+
+    .principal p {
+        width: 80%;
+    }
+
     .beneficio {
-        padding: 0;
+        padding: 3em 0;
     }
 
     .beneficio-conteudo {
@@ -222,5 +235,9 @@ footer {
 
     .beneficio-lista, .foto-beneficio {
         width: 100%;
+    }
+
+    .mapa {
+        margin: 0;
     }
 }
